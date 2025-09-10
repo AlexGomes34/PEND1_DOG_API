@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 5%;
+    gap: 10px;
+}
+.img{
+    width: 20%;
+    height: 100%;
+    place-self: center;
+}
