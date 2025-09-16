@@ -30,9 +30,22 @@ async function criarImagemCachorro () {
         diva.appendChild(img)
         diva.classList.add('div')
         img.classList.add('img')
-    });
 
+        img.addEventListener('click', function(){
+            window.open(url)
+        })
+        
+    });
+    
 }
+campoPesquisa.addEventListener('keydown', async(evento)=>{
+    if(evento.key === 'Enter' || evento.keyCode === 13){
+        const imagens = await criarImagemCachorro(campoPesquisa.value)
+        CSSContainerRule.textContent = ''
+        imagens.forEach(img => criarImagemCachorro(img))
+    }
+})
+
 
 btnPesquisa.addEventListener('click', criarImagemCachorro)
 
