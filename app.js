@@ -29,7 +29,7 @@ async function criarImagemCachorro () {
 
         diva.appendChild(img)
         diva.classList.add('div')
-        diva.classList.add('img')
+        img.classList.add('img')
     });
 
 }
